@@ -6,6 +6,10 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 ```
+After install a new dependency
+```
+pip3 freeze > requirements.txt
+```
 
 To run this project:
 ```sh
