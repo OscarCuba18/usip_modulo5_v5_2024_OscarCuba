@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Categorías</title>
+</head>
+<body>
+    <h1>Lista de Categorías</h1>
+    <form method="get" action="{% url 'filtrar_categorias' %}">
+        <input type="text" name="nombre" placeholder="Filtrar por nombre">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        {% for categoria in categorias %}
+            <li>{{ categoria.nombre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
